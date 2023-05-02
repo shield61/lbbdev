@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 printf "%s " "$(tail -n -1 "$HOME/.bash_history")"
 printf "\n"
-ps -p "$(pidof curl)" -o args
+ps -p $(pidof curl) -o args
 _SOURCEURL=""
 _SOURCEBRANCH=""
 _SOURCEREPO=""
