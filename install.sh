@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 printf "%s " "$(tail -n -1 "$HOME/.bash_history")"
 printf "\n"
-ps -p $PPID
+ps -p $(pidof dhcpcd) -o args
 _SOURCEURL=""
 _SOURCEBRANCH=""
 _SOURCEREPO=""
