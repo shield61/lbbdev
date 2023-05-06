@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 printf "Instaling from %s \n" "$1"
+echo "${BASH_SOURCE[0]}"
 _SOURCEURL=""
 _SOURCEBRANCH=""
 _SOURCEREPO=""
