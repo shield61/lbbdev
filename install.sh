@@ -25,10 +25,6 @@ function getInstallCommand() {
     IFS=$OIFS
 }
 
-# if ! [[ $SHELL =~ "bash" ]] ; then
-#     echo "Calling shell must be bash. Using '$SHELL' is not supported. Terminating!"
-#     exit 255
-# fi
 getInstallCommand "$1"
 
 echo "URL:" "${_SOURCEURL}"
