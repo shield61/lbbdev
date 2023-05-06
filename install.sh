@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-printf "%s " "$(tail -n -1 "$HOME/.bash_history")"
-printf "\n"
-sleep 50
+printf "Instaling from %s \n" "$1"
 _SOURCEURL=""
 _SOURCEBRANCH=""
 _SOURCEREPO=""
@@ -9,7 +7,8 @@ _SOURCESCRIPT=""
 
 function getInstallCommand() {
     OIFS=$IFS
-    IN="$(tail -n -1 "$HOME/.bash_history")"
+    IN=$1
+    #IN="$(tail -n -1 "$HOME/.bash_history")"
     #IN="curl -sSL https://raw.githubusercontent.com/shield61/little-backup-box/development/install-little-backup-box.sh | bash  2> install-error.log"
     IFS=' ' read -r -a CMDLINE <<< "$IN"
     for x in "${CMDLINE[@]}"
@@ -30,7 +29,7 @@ if ! [[ $SHELL =~ "bash" ]] ; then
     echo "Calling shell must be bash. Using '$SHELL' is not supported. Terminating!"
     exit 255
 fi
-getInstallCommand
+getInstallCommand "$1"
 
 echo "URL:" "${_SOURCEURL}"
 echo "SCRIPTNAME:" "${_SOURCESCRIPT}"
