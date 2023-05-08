@@ -33,4 +33,4 @@ echo "SCRIPTNAME:" "${_SOURCESCRIPT}"
 echo "BRANCH:" "${_SOURCEBRANCH}"
 echo "REPOSITORY:" "${_SOURCEREPO}"
 
-echo git clone https://github.com/"$(_SOURCEOWNER)"/"$(_SOURCEREPO)".git
+echo git clone https://github.com/"$_SOURCEOWNER"/"$_SOURCEREPO".git
