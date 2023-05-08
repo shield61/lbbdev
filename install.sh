@@ -5,6 +5,7 @@ _SOURCEURL=""
 _SOURCEBRANCH=""
 _SOURCEREPO=""
 _SOURCESCRIPT=""
+_SOURCEOWNER=""
 
 function getInstallCommand() {
     OIFS=$IFS
@@ -20,6 +21,7 @@ function getInstallCommand() {
             _SOURCESCRIPT=${URL[-1]}
             _SOURCEBRANCH=${URL[-2]}
             _SOURCEREPO=${URL[-3]}
+            _SOURCEOWNER=${URL[-4]}
         fi
         continue
     done
@@ -32,5 +34,6 @@ echo "URL:" "${_SOURCEURL}"
 echo "SCRIPTNAME:" "${_SOURCESCRIPT}"
 echo "BRANCH:" "${_SOURCEBRANCH}"
 echo "REPOSITORY:" "${_SOURCEREPO}"
+echo "OWNER:" "${_SOURCEOWNER}"
 
 echo git clone https://github.com/"$_SOURCEOWNER"/"$_SOURCEREPO".git
