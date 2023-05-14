@@ -36,4 +36,4 @@ echo "BRANCH:" "${_SOURCEBRANCH}"
 echo "REPOSITORY:" "${_SOURCEREPO}"
 echo "OWNER:" "${_SOURCEOWNER}"
 
-echo git clone https://github.com/"$_SOURCEOWNER"/"${_SOURCEBRANCH}"/"$_SOURCEREPO".git
+echo git clone https://github.com/"$_SOURCEOWNER"/"$_SOURCEBRANCH"/"$_SOURCEREPO".git
